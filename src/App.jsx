@@ -1,3 +1,5 @@
+import { useState,useEffect } from 'react';
+
 /* imagenes informativas */
 import CSS from './App.module.css';
 import unoJPG from './assets/collage/1.jpg';
@@ -17,11 +19,41 @@ import A8 from './assets/albun/8.jpg';
 import A9 from './assets/albun/9.jpg';
 
 function App() {
+
+  const [countdown,setCountdown] = useState({ days:0,hours:0,minutes:0,seconds:0});
+
+  const calculateCountdown = ()=>{
+    const currentDate = new Date(); //obtengo la fecha actual
+    const targetDate = new Date('2024-05-18');//fijo la fecha objetivo
+    const difference = targetDate.getTime() - currentDate.getTime();
+
+    // Calcular días, horas, minutos y segundos restantes
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    setCountdown({ days, hours, minutes, seconds });
+  };
+
+  useEffect(()=>{
+    const interval = setInterval(() => {calculateCountdown();}, 1000);
+    return () => clearInterval(interval);
+  },[]);
+
   return (
     <div className={CSS.container}>
       {/* primera vista*/}
       <div className={CSS.card}>
         <img src={unoJPG} alt="imagen uno" className={CSS.imguno}/>
+        <div className={CSS.cronometro}>
+          <p>faltan:</p>
+          <div className={CSS.reloj}>
+              {countdown.days} dias
+              <br></br>
+              {countdown.hours} hs - {countdown.minutes} m - {countdown.seconds} s
+          </div>
+        </div>
       </div>
       {/* album de scroll horizontal */}
       <div className={CSS.album}>

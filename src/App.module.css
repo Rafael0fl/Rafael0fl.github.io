@@ -20,7 +20,6 @@ body{
     align-items: center;
     flex-direction: column;
 }
-
 .card{
     width: 100%;
     height: 100vh;
@@ -29,13 +28,15 @@ body{
     font-family: 'Amarillo', sans-serif;
     position: relative;
 }
-.imguno{
-    width: auto;
-    height: 100vh;
-}
 .img{
     width: 100vw;
     height: 100vh;
+}
+
+.imguno{
+    width: auto;
+    height: 100vh;
+    z-index: 1;
 }
 
 .album{
@@ -55,15 +56,6 @@ body{
     max-height: 100vh;
 }
 
-.imgH{
-    width: auto;
-    height: auto;
-}
-.imgV{
-    width: auto;
-    height: auto;
-}
-
 .ubicacionInfo{
     position: absolute;
     width: 100%;
@@ -73,4 +65,27 @@ body{
     align-items: start;
     transform: translateY(60%);
     font-size:x-large;
+}
+
+.cronometro{
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    z-index: 2;
+    transform: translateY(150%);
+    font-size:larger;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reloj{
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid green;
+    border-radius: 15px;
+    background-color: rgba(0, 76, 0, 0.7);
 }
