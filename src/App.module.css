@@ -81,11 +81,11 @@ body{
     align-items: center;
 }
 .reloj{
-    width: 50%;
-    height: auto;
+    width: 70%;
+    height: 50%;
     margin-left: auto;
     margin-right: auto;
-    border: 5px solid green;
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 15px;
-    background-color: rgba(0, 76, 0, 0.7);
+    background-color: rgba(128, 128, 128, 0.7);
 }

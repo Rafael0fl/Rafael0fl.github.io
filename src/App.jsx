@@ -47,8 +47,9 @@ function App() {
       <div className={CSS.card}>
         <img src={unoJPG} alt="imagen uno" className={CSS.imguno}/>
         <div className={CSS.cronometro}>
-          <p>faltan:</p>
           <div className={CSS.reloj}>
+              faltan:
+              <br></br>
               {countdown.days} dias
               <br></br>
               {countdown.hours} hs - {countdown.minutes} m - {countdown.seconds} s
