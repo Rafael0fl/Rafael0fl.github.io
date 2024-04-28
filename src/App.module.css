@@ -82,7 +82,7 @@ body{
 }
 .reloj{
     width: 70%;
-    height: 50%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     border: 5px solid rgb(0, 0, 0);
