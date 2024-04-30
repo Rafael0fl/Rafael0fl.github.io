@@ -17,6 +17,7 @@ body{
     height: auto;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 .card{
     width: 100%;
@@ -77,16 +78,14 @@ body{
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: center;
-
-    border: 2px solid red;
-    box-sizing: border-box;
 }
 .reloj{
     width: auto;
     height: auto;
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 15px;
     background-color: rgba(128, 128, 128, 0.7);
     text-align: center;
+    line-height: 300%;
     padding: 20px;
 }
