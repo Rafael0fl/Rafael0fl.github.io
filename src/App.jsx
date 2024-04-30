@@ -85,6 +85,9 @@ function App() {
       {/* confirmar presencia */}
       <div className={CSS.card}>
         <img src={cuatroJPG} alt="imagen cuatro" className={CSS.img}/>
+        <div className={CSS.asistencia}>
+          <a href="whatsapp://send?phone=+5493813696049&text=Hola Angy, Alli estare!! :)" className={CSS.botonAsistencia}>Confirmar</a>
+        </div>
       </div>
       {/* saludo final */}
       <div className={CSS.card}>
@@ -100,6 +103,6 @@ export default App
 /*
   comentarios
 
-  +
+  +5493813696049
 
 */
