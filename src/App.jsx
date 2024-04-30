@@ -47,6 +47,7 @@ function App() {
       <div className={CSS.card}>
         <img src={unoJPG} alt="imagen uno" className={CSS.imguno}/>
         <div className={CSS.cronometro}>
+          <div></div>
           <div className={CSS.reloj}>
               faltan:
               <br></br>
