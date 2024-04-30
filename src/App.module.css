@@ -15,6 +15,7 @@ body{
 .container{
     width: 100%;
     height: auto;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -112,4 +113,14 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 40px;
+    line-height: 60px;
+}
+
+/* ------------------ responsive ------------------------- */
+
+@media (min-width: 501px) {
+    body{
+        display: flex;
+        justify-content: center;
+    }
 }
